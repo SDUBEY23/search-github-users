@@ -1,4 +1,3 @@
-// STEP 1 - Include Dependencies
 // Include react
 import React from "react";
 
@@ -12,22 +11,25 @@ import FusionCharts from "fusioncharts";
 import Chart from "fusioncharts/fusioncharts.charts";
 
 // Include the theme as fusion
-import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
+import FusionTheme from "fusioncharts/themes/fusioncharts.theme.candy";
 
 // Adding the chart and theme as dependency to the core fusioncharts
 ReactFC.fcRoot(FusionCharts, Chart, FusionTheme);
 
 const chartComponent = ({ data }) => {
   const chartConfigs = {
-    type: "pie3d", // The chart type
-    width: "400", // Width of the chart
+    type: "doughnut2d", // The chart type
+    width: "100%", // Width of the chart
     height: "400", // Height of the chart
     dataFormat: "json", // Data type
     dataSource: {
       // Chart Configuration
       chart: {
-        caption: "Languages",
-        theme: "fusion",
+        caption: "Stars per Language",
+        decimals: 0,
+        doughnutRadius: "45%",
+        showPercentValue: 0,
+        theme: "candy",
       },
       // Chart Data
       data,
