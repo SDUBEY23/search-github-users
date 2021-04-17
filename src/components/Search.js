@@ -9,6 +9,7 @@ const Search = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (user) {
+      console.log(user);
     }
   };
   return (
